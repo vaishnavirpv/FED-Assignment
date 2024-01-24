@@ -401,6 +401,8 @@ a:hover i::after
     display: flex; 
     justify-content: center; 
     align-items: center;
+}
+
 /* Lottie CSS */
 *,html{font-family: Arial, Helvetica, sans-serif;}
 .bg-blue{background: #153863;}
