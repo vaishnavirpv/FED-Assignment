@@ -7,11 +7,19 @@ body{
 }
 .absolute{
     position: absolute;
-    top: 50px !important;
+    top: 80px !important;
     inset: 0;
     justify-content: center;
     display: inline-flex;
     flex-direction: row;
+}
+
+#title{
+    padding-top: 100px;
+}
+
+h4{
+    padding-top: 100px;
 }
 
 .justify-center{
@@ -393,4 +401,19 @@ a:hover i::after
     display: flex; 
     justify-content: center; 
     align-items: center;
+/* Lottie CSS */
+*,html{font-family: Arial, Helvetica, sans-serif;}
+.bg-blue{background: #153863;}
+.animation-center{  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+.loading-text{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    top: -50px;
+    position: relative;
 }
