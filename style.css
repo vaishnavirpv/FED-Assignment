@@ -7,11 +7,19 @@ body{
 }
 .absolute{
     position: absolute;
-    top: 50px !important;
+    top: 80px !important;
     inset: 0;
     justify-content: center;
     display: inline-flex;
     flex-direction: row;
+}
+
+#title{
+    padding-top: 100px;
+}
+
+h4{
+    padding-top: 100px;
 }
 
 .justify-center{
