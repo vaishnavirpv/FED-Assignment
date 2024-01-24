@@ -73,7 +73,7 @@ h1{
     font-family: sans-serif;
     font-size: 90px;
     color: white;
-    text-shadow: 2px 2px 4px red;
+    text-shadow: 4px 4px 8px yellow;
 } 
 
 /* Button CSS */
