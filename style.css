@@ -73,6 +73,7 @@ h1{
     font-family: sans-serif;
     font-size: 90px;
     color: white;
+    text-shadow: 2px 2px 4px red;
 } 
 
 /* Button CSS */
@@ -84,6 +85,7 @@ h1{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
 body
@@ -92,7 +94,6 @@ body
     justify-content: center;
     align-items: center; 
     min-height: 100vh;
-    background: #27282c; 
     flex-direction: column;
     gap: 50px;
 }
@@ -113,16 +114,16 @@ a
 
 a:hover
 {
-    background: var (--clr);
+    background: var(--clr);
     letter-spacing: 0.25em;
-    box-shadow: 0 0 35px var (--clr);
+    box-shadow: 0 0 35px var(--clr);
 }
 a:before
 {
     content:'';
     position: absolute;
     inset: 2px;
-    background: #27282c;
+    background: black;
 }
 
 a span
