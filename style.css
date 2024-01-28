@@ -415,3 +415,25 @@ a:hover i::after
     top: -50px;
     position: relative;
 }
+
+/* Game page */
+.grid{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square{
+    height: 200px;
+    width: 200px;
+    border: solid white 1px;
+    background-size: cover;
+    background-position: center;
+}
+
+.mole{
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+}
