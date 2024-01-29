@@ -75,16 +75,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Childhood snack images
     const childHoodSnacks = [
-      'mamee.jpg',
-      'chupa.jpg',
-      'eyeglass.jpg'
+      'mamee1.png',
+      'chupa1.png',
+      'eyeglass1.png'
     ];
 
     // Other images
     const otherThings = [
-      'bitter.jpg',
-      'fries.jpg',
-      'burger.jpg'
+      'fries1.png',
+      'burger1.png'
     ];
 
     // Function to get a random square to put the mole
@@ -162,10 +161,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let countDownTimerId = setInterval(countDown, 1000)
   }
-
-console.log('Need to wait');
-
-setTimeout(function() {
-  console.log('setting window location');
-  window.location.href = "https://www.np.edu.sg"; // to be changed to the redirected page (Thumbs up man!!!)
-}, 6000);})
+});
