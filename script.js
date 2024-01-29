@@ -162,4 +162,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let countDownTimerId = setInterval(countDown, 1000)
   }
-});
+
+console.log('Need to wait');
+
+setTimeout(function() {
+  console.log('setting window location');
+  window.location.href = "https://www.np.edu.sg"; // to be changed to the redirected page (Thumbs up man!!!)
+}, 6000);})
