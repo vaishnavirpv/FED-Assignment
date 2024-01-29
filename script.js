@@ -75,26 +75,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Childhood snack images
     const childHoodSnacks = [
-<<<<<<< HEAD
-      'mamee1.png',
-      'chupa1.png',
-      'eyeglass1.png'
-=======
       'chupa1.png',
       'eyeglass1.png',
       'mamee1.png'
->>>>>>> 13ba15ed62d91e20f15a2f9721d0473379578ed7
     ];
 
     // Other images
     const otherThings = [
-<<<<<<< HEAD
-      'fries1.png',
-      'burger1.png'
-=======
       'burger1.png',
       'fries1.png'
->>>>>>> 13ba15ed62d91e20f15a2f9721d0473379578ed7
     ];
 
     // Function to get a random square to put the mole
@@ -132,17 +121,11 @@ document.addEventListener('DOMContentLoaded', function () {
           if (isChildHoodSnack){
             result++; // Add points when a childHoodSnack element is clicked
           } else if (isOtherThings){
-<<<<<<< HEAD
-            clearInterval(countDownTimerId);
-            clearInterval(timerId);
-            alert('GAME OVER! Your final score is ' + result);
-=======
             // End the game immediately if an "otherThings" element is clicked
               clearInterval(countDownTimerId);
               clearInterval(timerId);
               alert('GAME OVER! Your final score is ' + result);
               return; // Exit the event listener
->>>>>>> a3c2ee6c356607ec98c30d7354b21dc4e285651d
           }
           
           score.textContent = result
@@ -178,8 +161,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let countDownTimerId = setInterval(countDown, 1000)
   }
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 13ba15ed62d91e20f15a2f9721d0473379578ed7
