@@ -120,9 +120,13 @@ document.addEventListener('DOMContentLoaded', function () {
           const isOtherThings = otherThings.some(image => square.style.backgroundImage.includes(image));
           
           if (isChildHoodSnack){
-            result++;
+            result++; // Add points when a childHoodSnack element is clicked
           } else if (isOtherThings){
-            result--;
+            // End the game immediately if an "otherThings" element is clicked
+              clearInterval(countDownTimerId);
+              clearInterval(timerId);
+              alert('GAME OVER! Your final score is ' + result);
+              return; // Exit the event listener
           }
           
           score.textContent = result
