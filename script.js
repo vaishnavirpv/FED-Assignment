@@ -2,6 +2,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // Get the data-page attribute value
   const currentPage = document.body.dataset.page;
 
+  // RestDB API key
+  const APIKEY = "65b735da5a960fa8fe7795a4";
+
+  // Username and email declaration
+  let username = "";
+  let email = "";
+
   // Declare processData function in the outer scope
   function processData(data) {
     return `<p>${data.setup}<br>${data.punchline}</p>`;
@@ -158,5 +165,80 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     let countDownTimerId = setInterval(countDown, 1000)
+
+  } else if (currentPage === 'form-page'){
+    document.getElementById("player-submit").addEventListener("click", function(e) {
+      e.preventDefault();
+
+      // Username and email entry
+      username = document.getElementById("username").value;
+      email = document.getElementById("email").value;
+
+      let settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://fedassg2-98b9.restdb.io/rest/leaderboards",
+        "method": "GET",
+        "headers": {
+          "content-type": "application/json",
+          "x-apikey": APIKEY,
+          "cache-control": "no-cache"
+        }
+      }
+      
+      console.log(username, email)
+      
+      fetch("https://fedassg2-98b9.restdb.io/rest/leaderboards", settings)
+        .then(response => response.json())
+        .then(response => {
+
+          let usernameExists = contentList.some(list => list[0] === username);
+          let emailExists = contentList.some(list => list[1] === email);
+
+          if (usernameExists && emailExists) {
+            alert("Both username and email already exist. Please enter different values.");
+          } else if (usernameExists) {
+            alert("Username already exists. Please enter a different username.");
+          } else if (emailExists) {
+            alert("Email already exists. Please enter a different email.");
+          } else {
+            var jsondata = {
+              "username": username,
+              "email": email
+            };
+
+          var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://fedassg2-98b9.restdb.io/rest/leaderboards",
+            "method": "POST",
+            "headers": {
+              "content-type": "application/json",
+              "x-apikey": APIKEY,
+              "cache-control": "no-cache"
+            },
+            "processData": false,
+            "body": JSON.stringify(jsondata)
+            }
+
+            fetch("https://fedassg2-98b9.restdb.io/rest/leaderboards", settings)
+              .then(response => {
+                if (!response.ok){
+                  throw new Error(`Network response was not ok: ${response.statusText}`);
+                }
+                return response.json();
+              })
+              .then(data => {
+                console.log(data);
+              })
+              .catch(error => {
+                console.error(error);
+              })
+            console.log('Success yeahh')
+          }
+        })
+      })     
+  } else if (currentPage === "leaderboards-page"){
+    
   }
 });

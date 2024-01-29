@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 
 <head>
+    <title>B4 We Start...</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body data-page="form-page">
     <div class="box">
         <span class="borderLine"></span>
         <form>
             <h2><b>B4 We Start...</b></h2> 
             <div class="inputBox">
-                <input type="text" required="required"> 
+                <input id="username" type="text" required="required"> 
                 <span>Username</span>
                 <i></i>
             </div>
             <div class="inputBox">
-                <input type="email" required="required">
+                <input id="email" type="email" required="required">
                 <span> Email </span>
                 <i></i>
             </div>
             
-            <input type="submit" value="Start">
+            <input type="submit" value="Start" id="player-submit">
             <p id="or">or</p>
-            <input type="submit" value="continue as guest">
+            <input type="submit" value="Continue as guest">
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
