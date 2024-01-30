@@ -417,19 +417,51 @@ a:hover i::after
 }
 
 /* Game page */
+
+.leftAlignedGrid{
+    width: 80%;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10%;
+}
+
+.gameContainer{
+    width: 100%;
+}
+
+.scoreboard{
+    width: 20%;
+    display: flex;
+    float: right;
+    flex-wrap: wrap;
+}
+
+#timer{
+     margin-top: 30%;
+     margin-right: 50%;
+}
+
+#score{
+    /*margin-bottom: 20px;*/
+    display: inline-block;
+}
+
 .grid{
-    width: 600px;
-    height: 600px;
+    width: 525px;
+    height: 525px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .square{
-    height: 200px;
-    width: 200px;
-    border: solid white 1px;
+    height: 175px;
+    width: 175px;
+    border: solid white 2px;
+    border-style: double;
     background-size: cover;
     background-position: center;
+    box-shadow: 0px 0px 15px yellow;
 }
 
 .mole{
