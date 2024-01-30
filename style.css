@@ -428,23 +428,19 @@ a:hover i::after
 
 .gameContainer{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .scoreboard{
-    width: 20%;
+    /*width: 20%;
     display: flex;
-    float: right;
-    flex-wrap: wrap;
-}
-
-#timer{
-     margin-top: 30%;
-     margin-right: 50%;
-}
-
-#score{
-    /*margin-bottom: 20px;*/
-    display: inline-block;
+    float: right;*/
+    margin-left: 20px;
+    color: white;
+    font-size: 25px;
+    padding-left: 15px;
 }
 
 .grid{
