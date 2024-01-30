@@ -419,11 +419,10 @@ a:hover i::after
 /* Game page */
 
 .leftAlignedGrid{
-    width: 80%;
     float: left;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 10%;
+    padding: 0 70px;
 }
 
 .gameContainer{
@@ -437,10 +436,10 @@ a:hover i::after
     /*width: 20%;
     display: flex;
     float: right;*/
-    margin-left: 20px;
+    margin-left: 70px;
     color: white;
-    font-size: 25px;
-    padding-left: 15px;
+    font-size: 20px;
+    white-space: nowrap;
 }
 
 .grid{
@@ -448,6 +447,7 @@ a:hover i::after
     height: 525px;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
 }
 
 .square{
@@ -464,4 +464,75 @@ a:hover i::after
     background-color: transparent;
     background-size: cover;
     background-position: center;
+}
+
+/*for face*/
+.smiley-face
+{
+    margin-right: 50px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.face{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #ffcd00;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.face::before{
+    content: '';
+    position: absolute;
+    top: 180px;
+    width: 150px;
+    height: 70px;
+    background: #b57700;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    transition: 0.5s
+}
+.face:hover::before{
+    top: 210px;
+    width: 150px;
+    height: 20px;
+    background: #b57700;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.eyes{
+    position: relative;
+    top: -40px;
+    display: flex
+}
+.eyes .eye{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: block;
+    background: #fff;
+    margin: 0 15px;
+    border-radius: 50%
+}
+.eyes .eye::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border-radius: 50%
 }

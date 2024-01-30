@@ -8,19 +8,18 @@
 </head>
 
 <body data-page="game-page">
-
     <!-- Container to use for left and right align-->
     <div class="gameContainer">
-            <div class="scoreboard">
-                <center>
-                <!--Player's score-->
-                    <h2>Your score:</h2>
-                    <h2 id="score">0</h2>
-                <!--Countdown timer (60 seconds)-->
-                    <h2>Time left:</h2>
-                    <h2 id="time-left">60</h2>
-                </center>
-            </div>
+        <div class="scoreboard">
+            <center>
+            <!--Player's score-->
+                <h2>Your score:</h2>
+                <h2 id="score">0</h2>
+            <!--Countdown timer (60 seconds)-->
+                <h2>Time left:</h2>
+                <h2 id="time-left">60</h2>
+            </center>
+        </div>
         
         <!--Whack-a-Mole grid (9 x 9)-->
         <div class="leftAlignedGrid">
@@ -36,7 +35,15 @@
                 <div class="square" id="8"></div>
                 <div class="square" id="9"></div>
             </div>
-        </div>  
+        </div>
+        <div class="smiley-face">
+            <div class="face">
+                <div class="eyes">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                </div>
+            </div>
+        </div> 
     </div>
 
     <script src="script.js"></script>
