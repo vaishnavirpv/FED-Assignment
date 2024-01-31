@@ -5,9 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // RestDB API key
   const APIKEY = "65b735da5a960fa8fe7795a4";
 
-  // Username and email declaration
+  // Variable declaration
   let username = "";
   let email = "";
+  let id = "";
 
   // Declare processData function in the outer scope
   function processData(data) {
@@ -131,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
             clearInterval(countDownTimerId);
             clearInterval(timerId);
             alert('GAME OVER! Your final score is ' + result);
+            updateScore(id, username, email, result);
           }
           
           score.textContent = result
@@ -138,6 +140,35 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       })
     })
+
+    // Update score
+    function updateScore(id, username, email, result){
+      var jsondata = {
+        "username": username,
+        "email": email,
+        "score": result
+      };
+
+      var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://fedassg2-98b9.restdb.io/rest/leaderboards/(ObjectID)",
+        "method": "PUT",
+        "headers": {
+          "content-type": "application/json",
+          "x-apikey": APIKEY,
+          "cache-control": "no-cache"
+        },
+        "processData": false,
+        "body": JSON.stringify(jsondata)
+      };
+
+      fetch(`https://fedassg2-98b9.restdb.io/rest/leaderboards/${id}`, settings)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+        });
+    }
 
     // Moving the mole
     function moveMole() {
@@ -161,6 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
         clearInterval(countDownTimerId)
         clearInterval(timerId)
         alert('GAME OVER! Your final score is ' + result)
+        updateScore(id, username, email, result);
       }
     }
 
@@ -171,6 +203,9 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
 
       // Username and email entry
+      id = "";
+      username = "";
+      email = "";
       let contentList = [];
       username = document.getElementById("username").value;
       email = document.getElementById("email").value;
@@ -198,7 +233,8 @@ document.addEventListener('DOMContentLoaded', function () {
           let emailExists = contentList.some(list => list[1] === email);
 
           if (usernameExists && emailExists) {
-            alert("Both username and email already exist. Please enter different values.");
+            console.log("Both username and email exist together. Proceeding to the next step.");
+            // Redirection to be added here
           } else if (usernameExists) {
             alert("Username already exists. Please enter a different username.");
           } else if (emailExists) {
@@ -232,6 +268,8 @@ document.addEventListener('DOMContentLoaded', function () {
               })
               .then(data => {
                 console.log(data);
+                id = data._id;
+                console.log(id);
               })
               .catch(error => {
                 console.error(error);
@@ -241,7 +279,57 @@ document.addEventListener('DOMContentLoaded', function () {
         })
       })     
   } else if (currentPage === "leaderboards-page"){
-    
+    // get all the records from the database
+    // if only have less than 10 records, just show them all
+    // if have more than 10, compare score, then only take top 10
+    // put them in the leaderboards
+    // the problem now is i want the top 3 to have different colours
+    // 4-6 will have white or grey
+
+    let settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://fedassg2-98b9.restdb.io/rest/leaderboards",
+      "method": "GET",
+      "headers": {
+        "content-type": "application/json",
+        "x-apikey": APIKEY,
+        "cache-control": "no-cache"
+      }
+    };
+
+    fetch("https://fedassg2-98b9.restdb.io/rest/leaderboards?sort=score&dir=-1", settings)
+      .then(response => response.json())
+      .then(response => {
+        console.log(response);
+        let topRecords = response.slice(0, 10);
+        let tbody = document.getElementById('player-list').getElementsByTagName('tbody')[0];
+
+        for (let i = 0; i < topRecords.length; i++){
+
+          let player = topRecords[i];
+          let row = document.createElement('tr');
+
+          row.innerHTML = `<td>${i + 1}</td><td>${player.username}</td><td>${player.score}</td>`;
+
+          if (i === 0){
+            row.classList.add('top1');
+          }
+          else if (i === 1){
+            row.classList.add('top2');
+          }
+          else if (i === 2){
+            row.classList.add('top3');
+          }
+          else{
+            row.classList.add('normal');
+          }
+
+          tbody.appendChild(row);
+
+          console.log(topRecords[i])
+        }
+      });
   }
 });
 
