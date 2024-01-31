@@ -430,6 +430,8 @@ a:hover i::after
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    z-index: 1;
 }
 
 .scoreboard{
@@ -542,4 +544,9 @@ body{
 {
     height: 100%;
     background: #000;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
 }
