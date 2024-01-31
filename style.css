@@ -550,3 +550,11 @@ body{
     position: absolute;
     z-index: 0;
 }
+
+/*loading text*/
+
+#loading-text
+{
+    position: absolute;
+    z-index: 1;
+}
