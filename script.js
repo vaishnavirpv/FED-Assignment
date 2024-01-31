@@ -84,13 +84,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const childHoodSnacks = [
       'chupa1.png',
       'eyeglass1.png',
-      'mamee1.png'
+      'mamee1.png',
+      'Biscuit.png',
+      'RollerCoaster.png'
     ];
 
     // Other images
     const otherThings = [
       'burger1.png',
-      'fries1.png'
+      'fries1.png',
+      'nuggets.png'
     ];
 
     // Function to get a random square to put the mole
