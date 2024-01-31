@@ -171,6 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
 
       // Username and email entry
+      let contentList = [];
       username = document.getElementById("username").value;
       email = document.getElementById("email").value;
 
@@ -192,6 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.json())
         .then(response => {
 
+          contentList = response.map(item => [item.username, item.email]);
           let usernameExists = contentList.some(list => list[0] === username);
           let emailExists = contentList.some(list => list[1] === email);
 
@@ -243,8 +245,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-//dont disturb this part first
 
+/*
+//dont disturb this part first
 document.querySelector("body").addEventListener("mousemove", eyeball);
 function eyeball() {
   'use strict';
@@ -257,3 +260,4 @@ function eyeball() {
       eye.style.transform  = "rotate("+ rot +"deg)"
   })
 }
+*/
