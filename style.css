@@ -74,25 +74,24 @@ h1{
     margin: 0 auto;
     top: auto;
     text-align: center; 
-    font-family: Papyrus, fantasy;
+    font-family: 'Hello Space Techno', monospace;
     font-size: 90px;
     color: white;
     text-shadow: 4px 4px 8px yellow;
 } 
 
 h2{
-    font-family: Papyrus, fantasy;
+    font-family: 'Hello Space Techno', monospace;
 }
 
 /* Button CSS */
 
-@import url('https://fonts.googleapis.com/css2? family=Poppins:wght@300;400;500;600;700;800;900& display=swap');
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Hello Space Techno', monospace;
     color: white;
 }
 
@@ -404,7 +403,8 @@ a:hover i::after
 }
 
 /* Lottie CSS */
-*,html{font-family: Arial, Helvetica, sans-serif;}
+*,html{    font-family: 'Hello Space Techno', monospace;
+}
 .bg-blue{background: #153863;}
 .animation-center{  display: flex;
   justify-content: center;
@@ -439,9 +439,6 @@ a:hover i::after
 }
 
 .scoreboard{
-    /*width: 20%;
-    display: flex;
-    float: right;*/
     margin-left: 70px;
     color: white;
     font-size: 20px;
