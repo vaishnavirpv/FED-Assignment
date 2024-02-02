@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Game Pop-up</title>
+</head>
+<body>
+    <!-- Help Button -->
+    <button id="helpButton">Help</button>
+
+    <!-- Pop-up Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <!-- Page 1: Rules -->
+            <div class="page">
+                <h2>Game Rules</h2>
+                <ul>
+                    <li>Rule 1: click</li>
+                    <li>Rule 2: ...</li>
+                    <!-- Add more rules here -->
+                </ul>
+                <button class="arrow" id="nextPage">➡️</button>
+            </div>
+
+            <!-- Page 2: Motive and Benefits -->
+            <div class="page">
+                <h2>Motive and Benefits</h2>
+                <p>Learn why playing this game is awesome!</p>
+                <button class="arrow" id="prevPage">⬅️</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
