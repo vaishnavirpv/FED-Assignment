@@ -446,16 +446,17 @@ a:hover i::after
 }
 
 .grid{
-    width: 525px;
-    height: 525px;
+    width: 600px;
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    padding-top: 10px;
 }
 
 .square{
-    height: 175px;
-    width: 175px;
+    height: 200px;
+    width: 200px;
     border: solid white 2px;
     border-style: double;
     background-size: cover;
