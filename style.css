@@ -185,7 +185,7 @@ a:hover i::after
 /* POP UP HELPPPPPP */
 .overlay {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -196,17 +196,35 @@ a:hover i::after
 }
 
 .popup {
-    background: #fff;
+    position: absolute;
+    background: rgb(28, 0, 46);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    align-items: center;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#imgPop{
+    display: flex;
+    justify-content: center;
 }
 
 .close-btn {
+    display: flex;
+    justify-content: center;
     cursor: pointer;
-    color: #ff1867;
-    font-size: 20px;
+    align-items: center;
+    color: #f3f728;
+    font-size: 25px;
+    text-align: center;
     margin-top: 10px;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
 }
 
 /* Form CSS */
@@ -458,6 +476,9 @@ a:hover i::after
 
 .gameContainer{
     width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -466,6 +487,10 @@ a:hover i::after
 }
 
 .scoreboard{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
     margin-left: 70px;
     color: white;
     font-size: 20px;
@@ -473,18 +498,21 @@ a:hover i::after
 }
 
 .grid{
-    width: 600px;
-    height: 600px;
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     margin: auto;
     padding-top: 10px;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .square{
-    height: 200px;
-    width: 200px;
+    width: 600px;
+    height: 600px;
     border: solid white 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
     border-style: double;
     background-size: cover;
     background-position: center;
@@ -501,7 +529,9 @@ a:hover i::after
 .header {
     width :100%;
     font-size: small;
+    text-align: center;
  }
+
 
 /* for particle*/
 #particles-js
