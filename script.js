@@ -367,9 +367,17 @@ document.addEventListener('DOMContentLoaded', function () {
     return `<p>${data.setup}<br>${data.punchline}</p>`;
   }
 
-  if (currentPage === 'index-page'){
+
+    if (currentPage === 'index-page') {
+      function openPopup() {
+        document.getElementById('popup').style.display = 'flex';
+    }
     
-  }
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+    
+    }
   // Check which page we're on and execute specific code
   // Codes for loading-page
   else if (currentPage === 'loading-page') {
@@ -716,6 +724,3 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 });
-
-
-
