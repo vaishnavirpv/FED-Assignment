@@ -426,7 +426,7 @@ a:hover i::after
     float: left;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 70px;
+    padding: 0 200px;
 }
 
 .gameContainer{
@@ -439,7 +439,7 @@ a:hover i::after
 }
 
 .scoreboard{
-    margin-left: 70px;
+    margin-left: 250px;
     color: white;
     font-size: 20px;
     white-space: nowrap;
