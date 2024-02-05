@@ -4,6 +4,7 @@ body{
     justify-content: center;
     box-sizing: border-box;
     background-color: black;
+    overflow: hidden;
 }
 .absolute{
     position: absolute;
