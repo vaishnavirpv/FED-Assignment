@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const isOtherThings = otherThings.some(image => square.style.backgroundImage.includes(image));
           
           if (isChildHoodSnack){
+            playSound('soundEffect.mp3');
             result = result + 10; // Add points when a childHoodSnack element is clicked
           } else if (isOtherThings){
             clearInterval(countDownTimerId);
@@ -153,6 +154,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       })
     })
+
+    // Function to play sound
+    function playSound(soundPath) {
+      const soundEffect = new Audio(soundPath);
+      soundEffect.play();
+    }
 
     // Update score
     function updateScore(id, username, email, result){

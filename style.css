@@ -578,6 +578,10 @@ a:hover i::after
     white-space: nowrap;
 }
 
+div h2{
+    font-size: 40px;
+}
+
 .grid{
     display: grid;
     flex-wrap: wrap;
