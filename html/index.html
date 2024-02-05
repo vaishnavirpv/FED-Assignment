@@ -1,14 +1,18 @@
+<!--Landing page (index.html)-->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <title>Yum Yum Trek</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
 
+<head>
+    <title>Yum Yum Trek</title>
+
+    <!--CSS Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body data-page="index-page">
     <!--Background div block-->
+    <!--Moving orb background-->
     <div class = "absolute">
         <div class = "absolute inset-0 justify-center">
             <div class = "bg-shapel bg-teal opacity-50 bg-blur"></div>
@@ -17,28 +21,24 @@
         </div>
     </div>
     
-    <!--Game title-->
+    <!--Game title and one-line description-->
     <div id="title"><h1><i>Yum Yum Trek</i></h1></div>
     <h2>Embark to the land of your favourite childhood snacks!</h2>
 
     <!--Buttons-->
+    <!--Start (to go to form.html)-->
     <a href="form.html" style="--clr: #6eff3e"><span>Start</span><i></i></a>
-    <a href="#" style="--clr: #ff1867" onclick="openPopup()"><span>Help</span><i></i></a>
 
+    <!--Help (Game tutorial description)-->
+    <a href="#" style="--clr: #ff1867" id="help-btn" onclick="openPopup()"><span>Help</span><i></i></a>
     <div class="overlay" id="popup" onclick="closePopup()">
         <div class="popup" onclick="event.stopPropagation()">
             <img id="imgPop" src="popUp.png" alt="Help Image" width="400" height="500">
-            <span class="close-btn" onclick="closePopup()">Close</span>
+            <span id="close-btn" onclick="closePopup()">Close</span>
         </div>
     </div>
-    <script>
-        function openPopup() {
-            document.getElementById('popup').style.display = 'flex';
-        }
 
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
-    </script>
-
+    <!--JS Script-->
+    <script src="script.js"></script>
 </body>
+</html>
