@@ -100,18 +100,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Childhood snack images
     const childHoodSnacks = [
-      'chupa1.png',
-      'eyeglass1.png',
-      'mamee1.png',
-      'Biscuit.png',
-      'RollerCoaster.png'
+      '../images/chupa1.png',
+      '../images/eyeglass1.png',
+      '../images/mamee1.png',
+      '../images/Biscuit.png',
+      '../images/RollerCoaster.png'
     ];
 
     // Other images
     const otherThings = [
-      'burger1.png',
-      'fries1.png',
-      'nuggets.png'
+      '../images/burger1.png',
+      '../images/fries1.png',
+      '../images/nuggets.png'
     ];
 
     // Function to get a random square to put the mole
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
           
           // If childhood snack, play sound effect when hit and add 10 points
           if (isChildHoodSnack){
-            playSound('soundEffect.mp3');
+            playSound('../sfx/soundEffect.mp3');
             result = result + 10;
 
             // If hit other things, game over and update score in RestDB
