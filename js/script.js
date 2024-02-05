@@ -195,14 +195,10 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         "processData": false,
         "body": JSON.stringify(jsondata)
-      };
+      };      
 
-<<<<<<< HEAD:script.js
-     /* fetch(`https://fedassg2-98b9.restdb.io/rest/leaderboards/${id}`, settings)
-=======
-      // Updating leaderboard and redirect to leaderboard
+      // Updating the page with top 10 players with highest score
       fetch(`https://fedassg2-98b9.restdb.io/rest/leaderboards/${id}`, settings)
->>>>>>> 6a0790759e00785cfb8784f25d3f62a80cbe179e:js/script.js
         .then(response => response.json())
         .then(data => {
           console.log(data);
@@ -211,7 +207,8 @@ document.addEventListener('DOMContentLoaded', function () {
           setTimeout(() => {
             window.location.href = "leaderboard.html";
           }, 3000);
-        }); */
+
+        }); 
     }
 
     // Moving the mole
