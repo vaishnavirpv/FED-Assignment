@@ -183,14 +183,14 @@ document.addEventListener('DOMContentLoaded', function () {
         "body": JSON.stringify(jsondata)
       };
 
-      fetch(`https://fedassg2-98b9.restdb.io/rest/leaderboards/${id}`, settings)
+     /* fetch(`https://fedassg2-98b9.restdb.io/rest/leaderboards/${id}`, settings)
         .then(response => response.json())
         .then(data => {
           console.log(data);
           setTimeout(() => {
             window.location.href = "leaderboard.html";
           }, 3000);
-        });
+        }); */
     }
 
     // Moving the mole

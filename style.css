@@ -85,6 +85,11 @@ h2{
     font-family: 'Hello Space Techno', monospace;
 }
 
+h3{
+    font-family: 'Hello Space Techno', monospace;
+font-size: 30px;
+}
+
 /* Button CSS */
 
 *
@@ -541,7 +546,7 @@ a:hover i::after
     text-align: center;
     color: white;
     top: -50px;
-    position: relative;
+    position: absolute;
 }
 
 /* Game page */
@@ -617,6 +622,69 @@ div h2{
     text-align: center;
  }
 
+ /* Media Queries for different screen sizes */
+
+/* For screens smaller than 600px (phones) */
+@media only screen and (max-width: 600px) {
+    .gameContainer {
+        flex-direction: column;
+    }
+
+    .scoreboard {
+        order: 2; /* Change the order to 2 to move it below the grid */
+    }
+
+    div h2 {
+        font-size: 30px;
+    }
+
+    .grid .square {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* For screens between 601px and 768px (small tablets) */
+@media only screen and (min-width: 601px) and (max-width: 949px) {
+    .gameContainer {
+        flex-direction: column;
+    }
+
+    .scoreboard {
+        order: 2; /* Change the order to 2 to move it below the grid */
+    }
+
+    div h2 {
+        font-size: 25px;
+    }
+    .grid .square {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+/* For screens between 769px and 1024px (large tablets and small PCs) */
+@media only screen and (min-width: 950px) and (max-width: 1150px) {
+    .gameContainer{
+        margin-right: 200px;
+    }
+    .scoreboard {
+        margin-left: 200px;
+    }
+    div h2 {
+        font-size: 30px;
+    }
+    .grid .square {
+        width: 128px;
+        height: 128px;
+    }
+}
+
+/* For screens larger than 1024px (PCs and desktops) */
+@media only screen and (min-width: 1150px) {
+    /* Keep the original styles for larger screens */
+}
+
 
 /* for particle*/
 #particles-js
@@ -663,6 +731,7 @@ div h2{
     font-weight: bold;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+
 
 /* for pop up*/
 
