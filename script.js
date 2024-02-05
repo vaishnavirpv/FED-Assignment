@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
           console.log(data);
           setTimeout(() => {
             window.location.href = "leaderboard.html";
-          }, 5000);
+          }, 3000);
         });
     }
 
@@ -247,8 +247,10 @@ document.addEventListener('DOMContentLoaded', function () {
           contentList = response.map(item => [item.username, item.email]);
           let existingUsernameSet = contentList.filter(list => list[0] === username);
           let existingEmailSet = contentList.filter(list => list[1] === email);
-
-          if (existingUsernameSet.length > 0 && existingEmailSet.length > 0 && existingUsernameSet[0][1] !== email) {
+          if (username == "" && email == ""){
+            console.log("Username and email are empty.");
+            alert("Please enter a username and email.");        
+          } else if (existingUsernameSet.length > 0 && existingEmailSet.length > 0 && existingUsernameSet[0][1] !== email) {
             console.log("Both username and email exist in different sets.");
             alert("Invalid combination. Please try other combinations.");
           } else if (existingUsernameSet.length > 0 && existingEmailSet.length > 0 && existingUsernameSet[0][1] === email){
