@@ -293,7 +293,7 @@ a:hover i::after
     justify-content: center;
 }
 
-.close-btn {
+#close-btn {
     display: flex;
     justify-content: center;
     cursor: pointer;

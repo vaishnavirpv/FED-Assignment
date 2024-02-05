@@ -1,3 +1,5 @@
+<!--Loading page (loading.html)-->
+
 <!DOCTYPE html>
 <html>
 
@@ -5,15 +7,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Loading...</title>
+
+	<!--CSS Stylesheet-->
 	<link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body data-page="loading-page">
-	
+	<!--Particle effect for background and associated scripts-->
 	<div id="particles-js"></div>
-    <script type="text/javascript" src= "particles.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+    
 	
+	<!--Loading page Lottie animation-->
 	<div>
 		<div class="animation-center">
 			<div style="display:block;">
@@ -23,10 +27,11 @@
 		</div>
 		<div id="loading-text"><!--This will be filled with a joke later--></div>
 	</div>
+
+	<!--Lottie and particle background JS scripts-->
 	<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-   
+	<script type="text/javascript" src= "particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 	<script src="script.js"></script>
-
 </body>
-
 </html>
