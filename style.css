@@ -550,7 +550,7 @@ a:hover i::after
     float: left;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 200px;
+    padding: 0 70px;
 }
 
 .gameContainer{
@@ -570,8 +570,9 @@ a:hover i::after
     justify-content: space-around;
     align-items: center;
     margin: 10px 0;
-    margin-left: 70px;
-    margin-left: 250px;
+    margin-left: 200px;
+    margin-right: 150px;
+    padding-right: 50px;
     color: white;
     font-size: 20px;
     white-space: nowrap;
@@ -587,8 +588,8 @@ a:hover i::after
 }
 
 .square{
-    width: 600px;
-    height: 600px;
+    width: 175px;
+    height: 175px;
     border: solid white 2px;
     border-radius: 5px;
     cursor: pointer;
