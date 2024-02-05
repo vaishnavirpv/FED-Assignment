@@ -187,13 +187,13 @@ a:hover i::after
 
 /* Media queries for different devices for first page*/
 @media only screen and (min-width: 400px) {
-    /* Styles for tablets and larger */
+    /* Styles for mobile and larger */
     #title {
-        padding: 20px;
+        padding: 10px;
     }
 
     h1 {
-        font-size: 70px;
+        font-size: 80px;
     }
 
     h2 {
@@ -205,52 +205,14 @@ a:hover i::after
     }
 }
 
-@media only screen and (min-width: 728px) {
+@media only screen and (min-width: 600px) {
     /* Styles for tablets and larger */
     #title {
-        padding: 20px;
+        padding: 10px;
     }
 
     h1 {
-        font-size: 80px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    a {
-        font-size: 20px;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    /* Styles for desktops and larger (standard laptops, PCs) */
-    #title {
-        padding: 30px;
-    }
-
-    h1 {
-        font-size: 100px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    a {
-        font-size: 22px;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    /* Styles for larger desktops and PCs */
-    #title {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 120px;
+        font-size: 90px;
     }
 
     h2 {
@@ -259,6 +221,44 @@ a:hover i::after
 
     a {
         font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* Styles for desktops and larger (standard laptops, PCs) */
+    #title {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 120px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    a {
+        font-size: 27px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    /* Styles for larger desktops and PCs */
+    #title {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 140px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    a {
+        font-size: 30px;
     }
 }
 
