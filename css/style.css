@@ -633,6 +633,10 @@ div h2{
 }
 
 /* Leaderboard row styling */
+#leaderstyling {
+    overflow: visible; 
+    margin-bottom: 50px;
+}
 .top1 {
     background-color: gold;
     box-shadow: 0px 0px 15px rgba(255, 223, 0, 0.7);
