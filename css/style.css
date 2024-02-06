@@ -237,44 +237,48 @@ a:hover i::after
     }
 }
 
-/* Pop up styling for Help page */
+/* Styling for the overlay that covers the entire page */
 .overlay {
-    display: none;
+    display: none; /* Initially hidden */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
 }
+
+/* Styling for the popup at index page. (HELP) */
 .popup {
     position: absolute;
-    background: rgb(28, 0, 46);
+    background: rgb(28, 0, 46); /* Background color */
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     align-items: center;
-    z-index: 100;
+    z-index: 100; /* Ensure the popup is above other elements */
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-#imgPop{
+/* Styling for the image inside the popup */
+#imgPop {
     display: flex;
     justify-content: center;
 }
+/* Styling for the close button */
 #close-btn {
     display: flex;
     justify-content: center;
     cursor: pointer;
     align-items: center;
-    color: #f3f728;
+    color: #f3f728; /* Text color */
     font-size: 25px;
     text-align: center;
     margin-top: 10px;
-    top: 50%;
+    top: 50%; /* Position the button vertically at the center */
     bottom: 50%;
 }
 
@@ -315,6 +319,7 @@ a:hover i::after
     animation: animate 6s linear infinite;
     animation-delay: -3s;
 }
+/* form border */
 .borderLine
 {
     position: absolute;
@@ -351,6 +356,7 @@ a:hover i::after
     animation: animate 6s linear infinite;
     animation-delay: -4.5s;
 }
+/* form border animations */
 @keyframes animate
 {
     0%
@@ -362,6 +368,7 @@ a:hover i::after
         transform: rotate(360deg);
     }
 }
+/* form big rect styling */
 .box form
 {
     position: absolute;
@@ -380,6 +387,7 @@ a:hover i::after
     text-align: center; 
     letter-spacing: 0.1em;
 }
+/* form input */
 .box form .inputBox
 {
     position: relative;
@@ -419,6 +427,7 @@ a:hover i::after
     font-size: 0.75em;
     transform: translateY(-34px);
 }
+/* form writinf space */
 .box form .inputBox i
 {
     position: absolute;
@@ -462,6 +471,7 @@ a:hover i::after
     width: auto;
     margin-top: 60px;
 }
+/* form button hover */
 .box form input[type="submit"]:hover
 {
     opacity: 0.6;
@@ -470,17 +480,15 @@ a:hover i::after
 /* Lottie CSS and Loading page */
 *,html{    font-family: 'Hello Space Techno', monospace;
 }
-.bg-blue{background: #153863;}
-.animation-center{  display: flex;
-  justify-content: center;
-  align-items: center;
- }
-/* Loading text styling */
-#loading-text
-{
-    position: absolute;
-    z-index: 1;
-    padding-right: 50px;
+#lottie-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Takes full viewport height */
+}
+.animation-center,
+#loading-text {
+    position: relative; /* Changed from absolute */
 }
 
 /* Game page */
@@ -505,7 +513,7 @@ a:hover i::after
 /* Player score */
 .scoreboard{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* centers the whole group of child elements within the flex container */
     align-items: center;
     margin: 10px 0;
     margin-left: 200px;
@@ -513,10 +521,10 @@ a:hover i::after
     padding-right: 50px;
     color: white;
     font-size: 20px;
-    white-space: nowrap;
+    white-space: nowrap; /* this is to make the text in 1 line */
 }
 div h2{
-    font-size: 40px;
+    font-size: 40px;  
 }
 .grid{
     display: grid;
@@ -619,7 +627,7 @@ div h2{
 
 /* Leaderboard row styling */
 #leaderstyling {
-    overflow: visible; 
+    overflow: visible; /* to make only the leaderboard page scrollable */
     margin-bottom: 50px;
 }
 
