@@ -61,11 +61,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         console.log('HTML content updated successfully');
 
-        // Set a timeout for redirection to game page after 10 seconds
+        // Set a timeout for redirection to game page after 5 seconds
         setTimeout(function () {
           console.log('Setting window location');
           window.location.href = "game.html";
-        }, 10000);
+        }, 5000);
       } else {
         console.error('Container with ID "loading-text" not found');
       }
@@ -274,6 +274,45 @@ document.addEventListener('DOMContentLoaded', function () {
       fetch("https://fedassg2-98b9.restdb.io/rest/leaderboards", settings)
         .then(response => response.json())
         .then(response => {
+
+          // If both username and email are empty, alert the player to enter username and email
+          if (username == "" && email == ""){
+            console.log("Username and email are empty.");
+            alert("Please enter a username and email.");
+            return; // Stop further execution
+          }
+
+          // If username present but email not present, display error
+          if (username != "" && email == ""){
+            alert("Please enter an email.");
+            return; // Stop further execution
+          }
+
+          // If email present but username not present, display error
+          if (email != "" && username == ""){
+            alert("Please enter a username.");
+            return; // Stop further execution
+          }
+
+          // If both present:
+          if (username != "" && email != ""){
+            // Case 1: Username more than 15 and email have something but invalid
+            if (username.trim().length > 15 && !validateEmail(email.trim())){
+              alert("Username cannot be longer than 15 characters and email is invalid.");
+              return; // Stop further execution
+            }
+            // Case 2: Username more than 15 and email is valid
+            else if (username.trim().length > 15 && validateEmail(email.trim())){
+              alert("Username cannot be longer than 15 characters.");
+              return; // Stop further execution
+            }
+            // Case 3: Username less than 15 and email have something but invalid
+            else if (username.trim().length <= 15 && !validateEmail(email.trim())){
+              alert("Email is not in the correct format.");
+              return; // Stop further execution
+            }          
+          }
+
           // Put the information in [username, email] format
           contentList = response.map(item => [item.username, item.email]);
 
@@ -281,13 +320,8 @@ document.addEventListener('DOMContentLoaded', function () {
           let existingUsernameSet = contentList.filter(list => list[0] === username);
           let existingEmailSet = contentList.filter(list => list[1] === email);
 
-          // If both username and email are empty, alert the player to enter username and email
-          if (username == "" && email == ""){
-            console.log("Username and email are empty.");
-            alert("Please enter a username and email.");
-
-            // If username and email are of different sets, alert the player of invalid combination
-          } else if (existingUsernameSet.length > 0 && existingEmailSet.length > 0 && existingUsernameSet[0][1] !== email) {
+          // If username and email are of different sets, alert the player of invalid combination
+          if (existingUsernameSet.length > 0 && existingEmailSet.length > 0 && existingUsernameSet[0][1] !== email) {
             console.log("Both username and email exist in different sets.");
             alert("Invalid combination. Please try other combinations.");
 
@@ -306,14 +340,6 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {
               window.location.href = "loading.html";
             }, 3000);
-
-            // If username already exist, alert the player about it
-          } else if (existingUsernameSet.length > 0) {
-            alert("Username already exists. Please enter a different username.");
-
-            // If email already exist, alert the player about it
-          } else if (existingEmailSet.length > 0) {
-            alert("Email already exists. Please enter a different email.");
 
             // If player is a new player (has not played before), store their information in RestDB
           } else {
@@ -369,6 +395,12 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         })
       })
+
+      // Helper function for email validation using a basic regular expression
+      function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+  }
     
     // Leaderboard page JS implementation (leaderboard.html)
   } else if (currentPage === "leaderboards-page"){

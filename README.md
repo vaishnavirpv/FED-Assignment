@@ -3,11 +3,12 @@ This is our FED Assignment 2 project.
 Note: 
 For video walkthrough, please refer to the submission on BrightSpace.
 Please extract the file from the zip file to prevent errors.
+The game is also responsive :D
 
 # Yum Yum Trek - Embark to the land of your favourite childhood snacks!
 
 Our chosen theme is Theme 5 - Gamer Crazy.
-It is a modified and improved version of the classic game "Whac-A-Mole" that integrates Singapore's favourtite childhood snacks.
+It is a modified and improved version of the classic game "Whac-A-Mole" that integrates Singapore's favourite childhood snacks.
 
 Our target audience are anyone who shares a Singaporean childhood, bonding over their favourite local snacks.
 
@@ -23,7 +24,7 @@ To start players off, we have made a brief story to give the game a narrative, a
 
 This game follows a traditional game layout that consists of landing page (for the player to navigate to different pages), a form page for new players to sign up, the game page and also a leaderboard page.
 
-For the name of our game, we decided to go with "Yum Yum Trek" as we were inspired by a all-time classic, Star Trek, that was set in 23rd century aboard a starship whose crew was dedicated to exploring the galaxy. In our game's context, it is about journeying down memory lane to when we were still kids and bonded over childhood snacks. We want to give the players a sense of nostalgia and develop appreciation for our local childhood snacks.
+For the name of our game, we decided to go with "Yum Yum Trek" as we were inspired by an all-time classic, Star Trek, that was set in 23rd century aboard a starship whose crew was dedicated to exploring the galaxy. In our game's context, it is about journeying down memory lane to when we were still kids and bonded over childhood snacks. We want to give the players a sense of nostalgia and develop appreciation for our local childhood snacks.
 
 We chose black as our background colour to simulate the outer space feel. We want to make the players feel like they are exploring the world of childhood snacks in the vast outer space. Besides that, with a black background, other elements of the game will stand out and players will be able to focus on the main elements of the game, which is childhood snacks/tidbits.
 
