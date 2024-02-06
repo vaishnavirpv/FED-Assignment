@@ -486,14 +486,6 @@ a:hover i::after
   justify-content: center;
   align-items: center;
  }
-.loading-text{
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    color: white;
-    top: -50px;
-    position: absolute;
-}
 /* Loading text styling */
 #loading-text
 {
