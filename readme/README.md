@@ -37,9 +37,11 @@ The leaderboard colour scheme is chosen based on the rank of the player. For the
 
 The wireframe of this website is done in desktop, tablet and mobile view using Figma. The link to the Figma page is provided as follows and the wireframe with explanation and rationale (a Word document) can be accessed in GitHub.
 
-Link to the Figma wireframe: 
-----------Add new link!--------------
-https://www.figma.com/file/VIWox7Us74AJvXMJfrAwyZ/FED-Assignment-1-Low-Fidelity-Wireframe?type=design&node-id=0%3A1&mode=design&t=o9vX1bnDl0Tee69i-1
+Link to our game Figma wireframe: 
+https://www.figma.com/file/pBavSGNuKzrWcaJEVLeATI/FED-Assg-2-Wireframe?type=design&node-id=0%3A1&mode=dev&t=cs3zLJKbOcQuaqsh-1
+
+Link to our game GitHub repository:
+https://github.com/vaishnavirpv/FED-Assignment.git
 
 ## Features
 
@@ -51,7 +53,7 @@ https://www.figma.com/file/VIWox7Us74AJvXMJfrAwyZ/FED-Assignment-1-Low-Fidelity-
 
 - The fourth part of the game is the game page (game.html). This page consists of 2 parts, the first part being the player score and remaining time, and the second part being the 3x3 game grid. Whenever the player hits a childhood snack, there will be a sound effect played and the player's score will increase by 10 per childhood snack hit. As for the fast food, it will be game over for the player even if one is hit. The alternative way to game over is to survive until the timer runs out. When a game is over, an alert will pop up. Players are to acknowledge the alert before the game redirects them to the leaderboard page. Note that every game has random speed set, so this game is a combination of skill and luck. This is to make it a bit more unpredictable, thus making the game a tad more engaging.
 
-- The last part of the game is the leaderboard page (leaderboard.html). This page shows the top 10 performers in the game, ranked from the player that scored highest to lowest (limited to 10 players shown). The top 3 players will have their username and score presented in gold, silver and bronze background respectively, while others will have a dark blue background. This is to highlight the top performers and encourage other players to challenge them and break the new high score.
+- The last part of the game is the leaderboard page (leaderboard.html). This page shows the top 10 performers in the game, ranked from the player that scored highest to lowest (limited to 10 players shown). The top 3 players will have their username and score presented in gold, silver and bronze background respectively, while others will have a dark blue background. This is to highlight the top performers and encourage other players to challenge them and break the new high score. There is a restart button for the player to give the game a second try. (or more if they wish to!)
 
 ### Future outlooks to improve the game
 
@@ -103,29 +105,26 @@ Project looks
 ### Media
 - The photos used in this site were obtained from ...
 
-- Background slideshow image 1
-    - (https://www.tinycurl.co/wp-content/uploads/2022/05/blog-frog-amigurumi1.jpg)
+- Childhood snack images
+    - (https://www.teonghengtrading.com/image/teonghengtrading/image/cache/data/all_product_images/product-227/95b436ccc22684c0bbb175f0df3e61a1-640x640.jpg)
 
-- Background slideshow image 2
-    - (https://idsb.tmgrup.com.tr/ly/uploads/images/2020/07/28/48860.jpg)
+    - (https://th.bing.com/th/id/R.0dacbf86b1ff7b67746075946b819099?rik=HR%2FMVKGaL0AzWQ&riu=http%3A%2F%2Fsethlui.com%2Fwp-content%2Fuploads%2F2014%2F06%2Fpacific-market-06136014.jpg&ehk=ItTBbXdmnT37oqLsBn3PBna6qUOM4sUThgcJSrdIzx8%3D&risl=&pid=ImgRaw&r=0)
 
-- Background slideshow image 3
-    - (https://curiouspapaya.com/cdn/shop/articles/2_413d2269-83fe-4aa4-b6cf-2ef4987ba50a.png?v=1683949534)
+    - (https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/13038655_XL1_20221229.jpg)
 
-- Image on about.html
-    - (https://www.cambridgeindependent.co.uk/_media/img/750x0/8I5BY42FKF41Y4TINB4W.jpg)
+    - (https://th.bing.com/th/id/R.02ea0827ad6e45bb50433c7433fd1c7d?rik=4p0VS%2B3yDQMMTA&riu=http%3A%2F%2F2.bp.blogspot.com%2F-xGrREuST-3Y%2FUsGG8I67k8I%2FAAAAAAAAAN0%2FYgYnZcYUmg0%2Fs1600%2FEyeglass%2BCandy.jpg&ehk=MtLxCf0YYrRDhV79OzGC7QDMmtMaheZt8TAAVFzyzq0%3D&risl=&pid=ImgRaw&r=0)
 
-- Image 1 on project.html
-    - (https://i.etsystatic.com/18200874/r/il/89b24d/3633608213/il_1080xN.3633608213_dciv.jpg)
+    - (https://daganghalal.blob.core.windows.net/19720/Product/1000x1000__23mameemonsternoodlesnacksbarbeque-1614841077235.jpg)
 
-- Image 2 on project.html
-    - (https://laughingsquid.com/wp-content/uploads/2013/10/SquidTree.jpg)
+- Other images (fast food)
+    - (https://mob-sever-burger.ru/wp-content/uploads/2020/03/chiken-burger-1536x1150.jpg)
 
-- Image 3 on project.html
-    - (https://images.prismic.io/lc-yarn/794439b2-d737-42a3-8479-aeaf92c7bccf_kfi+indulgence+kettle+dyed+fingering.jpg?auto=compress,format&rect=0,0,1000,590&w=1000&h=590)
+    - (https://th.bing.com/th/id/R.62dca9303d9a4103199f081d9d0cced5?rik=TdCzudkgFnsfpA&riu=http%3A%2F%2F4everstatic.com%2Fimages%2F850xX%2Faliments-et-boissons%2Ffries-242501.jpg&ehk=ppVf%2BXmJ940uyzNDWygLLuy2MkGK41MjkZQK0sDwfRc%3D&risl=&pid=ImgRaw&r=0)
 
-- Image on contact.html
-    - (https://i.insider.com/60352a14bed5c50011a2c0c9?width=700)
+    - (https://www.thedailymeal.com/sites/default/files/story/2016/nuggets-shutterstock%20crop.jpg)
+
+- Sound effect when hitting a childhood snack
+    - (https://pixabay.com/sound-effects/eating-sound-effect-36186/)
 
 ### Acknowledgements
 
