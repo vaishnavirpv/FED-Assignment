@@ -43,6 +43,7 @@ https://www.figma.com/file/pBavSGNuKzrWcaJEVLeATI/FED-Assg-2-Wireframe?type=desi
 Link to our game GitHub repository:
 https://github.com/vaishnavirpv/FED-Assignment.git
 
+
 ## Features
 
 - The first part of the game is the landing page (index.html). It contains the title of the game and a short description, along with 2 buttons (Start and Help). When the player press the Start button, he/she will be redirected to the form page to fill up their username and email that will be used to claim their prize (for top 3 players with highest score). When the player press the Help button, a popup about the game story and brief gameplay guide will show up. This gives the player an idea about the game before they start playing.
@@ -129,3 +130,5 @@ Project looks
 ### Acknowledgements
 
 - We got the inspiration for this project from our love of childhood snacks and how food seems to be an effective way to bond with each other. From there, we wanted to manifest this idea in a Singaporean context that is more relatable to us and our target audience.
+
+- Thank you to Vincent Garreau for the sharing of particle background animation!
