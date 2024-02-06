@@ -43,8 +43,6 @@ https://www.figma.com/file/pBavSGNuKzrWcaJEVLeATI/FED-Assg-2-Wireframe?type=desi
 Link to our game GitHub repository:
 https://github.com/vaishnavirpv/FED-Assignment.git
 
-Link to our game page:
-https://vaishnavirpv.github.io/Yum-Yum-Trek/
 
 ## Features
 
