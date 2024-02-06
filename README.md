@@ -103,6 +103,20 @@ Project looks
 ### Content
 - As this is a game created based on a fictional story and situation, the content of this game are from ideas of our own that is designed to support the local kopitiam business and promote traditional childhood snacks to fellow Singaporeans who bonded over these snacks during their childhood.
 
+### Contributions of members
+- Meng Li
+    - Loading page (Lottie and joke API)
+    - Form page (Input validation)
+    - Game page (Game implementation and logic)
+    - Leaderboard page (RestB API and row colouring)
+    - JS (Linking pages, implement different JS logic to run for different pages)
+- Vaish
+    - Landing page (Background and button design, help page design)
+    - Form page (Form design)
+    - Game page (Game styling and background, editing of images)
+    - Leaderboard page (General design)
+    - JS (Particle background)
+
 ### Media
 - The photos used in this site were obtained from ...
 
