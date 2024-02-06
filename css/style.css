@@ -466,17 +466,6 @@ a:hover i::after
 {
     opacity: 0.6;
 }
-#or 
-{
-    width: auto; 
-    height: 10px; 
-    padding-top: 20px;
-    padding-bottom: 15px;
-    text-align: center; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-}
 
 /* Lottie CSS and Loading page */
 *,html{    font-family: 'Hello Space Techno', monospace;

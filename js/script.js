@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Redirect to game page after 3 seconds
             setTimeout(() => {
-              window.location.href = "game.html";
+              window.location.href = "loading.html";
             }, 3000);
           }
         })
