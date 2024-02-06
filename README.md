@@ -134,11 +134,3 @@ Project looks
 - We got the inspiration for this project from our love of childhood snacks and how food seems to be an effective way to bond with each other. From there, we wanted to manifest this idea in a Singaporean context that is more relatable to us and our target audience.
 
 - Thank you to Vincent Garreau for the sharing of particle background animation!
-/* -----------------------------------------------
-/* Author : Vincent Garreau  - vincentgarreau.com
-/* MIT license: http://opensource.org/licenses/MIT
-/* Demo / Generator : vincentgarreau.com/particles.js
-/* GitHub : github.com/VincentGarreau/particles.js
-/* How to use? : Check the GitHub README
-/* v2.0.0
-/* ----------------------------------------------- */
